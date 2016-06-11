@@ -79,7 +79,7 @@ si no hay otro hilo tiene mayor prioridad .
        19: Expects to work successfully. Outputs for all test cases will be display on 
 the screen after running "./nachos -q 19".
 
-Those test cases include:
+Los casos de prueba incluyen:
 
        <1> Priority test for scheduler. When Thread::Yield() is called, the scheduler 
               always run the thread with the highest priority, or switch between threads that share 
@@ -98,16 +98,22 @@ Those test cases include:
 ------------
 
 ###Whales
-We used 4 semaphores to implement whale matching. There are 3 functions with similar codes male, female and matchmaker representing whales from each class. There are four semaphores thus four wait lists, one for each whale class to make sure only one whale from each class is waiting to be matched, and another for whales to wait for being matched. Only when 3 whales from each of the 3 classes come, can they form a match and then return, otherwise wait. To make things clear, we add variables to indicate the number of match and whales from each classes, when a male whale comes or returns, the program will print "one male whale come(return from match NO.#)" and then print out the number of male whales waiting to be matched, when female and matchmaker come or return, the program will print similar message. And when a match 
-completed it will print "match NO.# completed"
+Se han utilizado 4 semáforos para implementar la concordancia de ballena . Hay 3 funciones con códigos similares ballenas macho , 
+hembra y casamentero en representación de cada clase . Hay cuatro semáforos de este modo, cuatro listas de espera , una para cada clase 
+de ballena para asegurarse de que sólo una ballena de cada clase está esperando a ser igualado , y otro para las ballenas que esperan a 
+ser emparejado . Sólo cuando las ballenas 3 de cada una de las 3 clases vienen, pueden formar un partido y luego regresar, 
+de lo contrario esperar. Para aclarar las cosas, añadimos las variables para indicar el número de partida y las ballenas de cada clase, 
+cuando llegue una ballena macho o devoluciones, el programa imprimirá " una ballena macho vino ( regreso de partido NO. #) " Y luego imprimir 
+el número de ballenas macho de espera que se ajustará, cuando la hembra y celestina vienen o regresan, el programa imprimirá mensaje similar. 
+Y cuando un partido completado se imprimirá " NO coincidir . #completado".
 
-    Test switch case numbers used:
+    Los casos de prueba incluyen:
          30: 9 whales in 3 pairs, 3 male, 3 female, 3 matchmaker, three matches succeed
          31: 8 whales , 3 male, 3 female, 2 matchmaker, only two matches succeed
          32: 7 whales , 3 male, 1 female, 3 matchmaker, only one match succeeds
          33: 9 whales in 3 pairs, 3 male, 3 female, 3 matchmaker, in a different order, three matches succeed
          
-	 we also tried -rs while testing and our program works fine in random switch circumstance
-         use -d w and -d x to see debug information
+	 también probamos -rs mientras que las pruebas y nuestro programa funciona bien en circunstancias interruptor de azar
+         utilizar -d -d x W  para ver la información de depuración
 
 -------------------
